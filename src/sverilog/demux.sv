@@ -1,10 +1,11 @@
 module demux #(
     parameter BITWIDTH = 16,
+    parameter T = logic,
     parameter NOUTPUTS = 2
 )(
-    input wire [BITWIDTH-1:0] In,
+    input T [BITWIDTH-1:0] In,
     input wire [$clog2(NOUTPUTS)-1:0] Sel,
-    output logic [BITWIDTH-1:0] Out [NOUTPUTS-1:0]
+    output T [BITWIDTH-1:0] Out [NOUTPUTS-1:0]
 );
 
     always_comb begin
