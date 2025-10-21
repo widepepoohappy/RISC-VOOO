@@ -7,7 +7,7 @@ module ooo_extension #(
     parameter NRALUOP = 8,
     parameter RF_DEPTH = 32,
     parameter RS_DEPTH = 8,
-	parameter RS_WIDTH_DIM = 2
+	parameter RS_WIDTH_DIM = 2			// Should be a multiple of 2
 
 ) (
     input logic [BITWIDTH-1:0] Rsx [NRSOURCEREG-1:0], 				// INFORMATION COMING FROM RF AND INSTRUCTION
