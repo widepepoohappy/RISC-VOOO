@@ -85,6 +85,12 @@ module ooo_extension #(
 			);
 		end
     endgenerate
+	genvar i;
+	generate begin
+		for(i = 0; i < NRALUOP; i++) begin
+			assign RS_to_ALU[i] = RS_out[i]
+		end
+	endgenerate
 	//############# END RESERVE STATION INSTANTIATION ###################
 
 	//############# START REGISTER ALIAS TABLE (RF) INSTANTIATION ###################
